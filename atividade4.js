@@ -1,15 +1,21 @@
 // Declarando o objeto com array
-let bd = {
-       1:{user:'Albert',pwd:'321'},
-       2:{user:'icaro',pwd:'212'},
-       3:{user:'Luan', pwd:'215'}
-};
 
-let login = prompt("Informe seu nome: ")
-let password = prompt("Informe sua senha: ")
-
-console.log('login inserido:', login);
-console.log('senha inserida: ',senha);
-
-((login == user.nome[0] && password == user.senha[0])) ? document.write("SEJA BEMVINDO") : document.write("USARIO INVALIDO");
-
+let banco = {
+       1: { user: 'Albert', senha: '321', nivel: 'JUNIOR' },
+       2: { user: 'icaro', senha: '212', nivel: 2 },
+       3: { user: 'Luan', senha: '215', nivel: 3 }
+     };
+     
+     let login = prompt("Informe seu nome: ");
+     let password = prompt("Informe sua senha: ");
+     
+     if (banco[1].user === login && banco[1].senha === password) {
+       document.write("SEJA BEM-VINDO " + banco[1].nivel);
+     } else if (banco[2].user === login && banco[2].senha === password) {
+       document.write("SEJA BEM-VINDO " + banco[2].nivel);
+     } else if (banco[3].user === login && banco[3].senha === password) {
+       document.write("SEJA BEM-VINDO " + banco[3].nivel);
+     } else {
+       document.write("USUÁRIO INVÁLIDO");
+     }
+     A
